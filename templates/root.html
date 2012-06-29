@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Overlay Tiler</title>
+    <link rel="stylesheet" href="/static/kd.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/_ah/channel/jsapi"></script>
+    <script src="//maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+    <script src="/static/common.js"></script>
+    <script src="/static/editor.js"></script>
+    <script src="/static/widgets.js"></script>
+    <script src="/static/overlayeditor.js"></script>
+    <script src="/static/overlay.js"></script>
+  </head>
+  <body id="root">
+    <div class="kd-appbar">
+      <h1 class="kd-appname">Overlay Tiler</h1>
+      <div id="kd-search">
+        <input type="text">
+        <a class="kd-button kd-button-submit" id="kd-searchbutton"><img src="/static/search.svg"></a>
+      </div>
+      <div id="kd-login">
+        <span class="kd-name">{{.User}}</span>
+        &nbsp;
+        <a class="kd-button" href="{{.LogoutURL}}">Log out</a>
+      </div>
+    </div>
+    <div id="container">
+      <input type="hidden" value="{{.UploadURL}}" id="upload-url">
+      <div id="status">
+        <p></p>
+        <progress max=100>
+      </div>
+      <div id="map-container">
+        <div id="map"></div>
+      </div>
+    </div>
+  </body>
+</html>

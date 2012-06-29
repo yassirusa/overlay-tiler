@@ -1,0 +1,14 @@
+application: overlay-tiler
+version: 2-dev
+runtime: go
+api_version: go1
+
+handlers:
+- url: /static
+  static_dir: static
+- url: /(|download|overlays.json|process|upload)
+  script: _go_app
+  login: required
+- url: /(send|slice|zip|_ah/start)
+  script: _go_app
+  login: admin

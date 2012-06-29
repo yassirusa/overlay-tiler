@@ -1,0 +1,9 @@
+backends:
+- name: zipper
+  class: B8
+  options: dynamic
+- name: slicer
+  class: B8
+  options: dynamic
+  instances: 4
+

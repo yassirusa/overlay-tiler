@@ -1,0 +1,11 @@
+queue:
+ - name: send
+   rate: 100/s
+ - name: slice
+   rate: 1/s
+   max_concurrent_requests: 4
+ - name: tile
+   mode: pull
+ - name: zip
+   rate: 1/s
+   max_concurrent_requests: 1

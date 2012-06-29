@@ -1,0 +1,7 @@
+Get the Go AppEngine SDK from here:
+https://developers.google.com/appengine/downloads#Google_App_Engine_SDK_for_Go
+
+Check out graphics-go:
+mkdir -p code.google.com/p
+cd code.google.com/p
+hg clone https://code.google.com/r/cbro-graphics-go/ graphics-go
